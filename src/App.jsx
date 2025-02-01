@@ -1,26 +1,26 @@
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import { Navbar } from './components/Navbar'
-import { Home } from './components/pages/Home'
-import { Me } from './components/pages/Me'
-import { About } from './components/pages/About'
-import { Projects } from './components/pages/Projects'
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import About from './components/pages/About';
+import Me from './components/pages/Me';
+import Projects from './components/pages/Projects';
+import './App.css'; // Se till att ha CSS för teman
+
 
 function App() {
-    
-    return (
-    
-    <section className='App'><Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/me" element={<Me />} />
-        <Route path="/projects" element={<Projects />} />     
-      </Routes>
-    </section>
+    const theme = useSelector((state) => state.theme); // Hämta temat från Redux
 
-    
-  )
+    return (
+        <div className={`app ${theme}`}>
+            <Navbar />
+            <Routes>
+                <Route path="/me" element={<Me />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+            </Routes>
+        </div>
+    );
 }
 
-export default App
+export default App;
