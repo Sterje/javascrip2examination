@@ -1,6 +1,5 @@
 .active {
     background-color: #1d4ed8;
-
 }
 
 nav {
@@ -10,11 +9,12 @@ nav {
     background-color: #0f172a;
     position: sticky;
     top: 0;
+    width: 100%;
 }
 
 /* Standard ljusa temat */
 nav.light {
-    background-color: rgb(205, 205, 205);
+    background-color: #cdcdcd;
     color: rgb(0, 0, 0);
 }
 
@@ -78,7 +78,7 @@ nav.light ul li a {
 }
 
 nav ul li a:not(.active):hover {
-    background-color: #172554;
+    background-color: #183595;
 }
 
 nav .menu {

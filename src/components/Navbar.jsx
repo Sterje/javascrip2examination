@@ -11,6 +11,10 @@ function Navbar() {
     const dispatch = useDispatch();
     const theme = useSelector((state) => state.theme.theme); 
 
+    const handleLinkClick = () => {
+        setMenuOpen(false); // Stänger menyn vid klick
+    };
+
     return (
         <nav className={theme}>
             <Link to="/" className="title">Sterje</Link>
@@ -23,9 +27,9 @@ function Navbar() {
                 <span></span>
             </div>
             <ul className={menuOpen ? "open" : ""}>
-                <li><NavLink to="/me">Me</NavLink></li>
-                <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/projects">Projects</NavLink></li>
+                <li><NavLink to="/me" onClick={handleLinkClick}>Me</NavLink></li>
+                <li><NavLink to="/about" onClick={handleLinkClick}>About</NavLink></li>
+                <li><NavLink to="/projects" onClick={handleLinkClick}>Projects</NavLink></li>
                 <img
                 src={theme === "light" ? darkImage : lightImage} 
                 alt="Theme Toggle"
@@ -33,7 +37,6 @@ function Navbar() {
                 onClick={() => dispatch(toggleTheme())} 
             />
             </ul>
-            
         </nav>
     );
 }
