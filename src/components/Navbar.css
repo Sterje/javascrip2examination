@@ -9,6 +9,7 @@ nav {
     background-color: #0f172a;
     position: sticky;
     top: 0;
+    height: 10vh;
     width: 100%;
 }
 

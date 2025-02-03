@@ -40,7 +40,7 @@ function Projects() {
     <tr>
       <th>Repository</th>
       <th>Beskrivning</th>
-      <th>GitHub Pages</th>
+      <th>Pages</th>
     </tr>
   </thead>
   <tbody>

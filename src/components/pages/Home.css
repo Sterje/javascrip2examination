@@ -1,0 +1,7 @@
+.home-container {
+    background-image: url('../../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;  /* Se till att det fyller hela skärmen */
+    width: 100%;
+}

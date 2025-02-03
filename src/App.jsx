@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
+import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Me from './components/pages/Me';
 import Projects from './components/pages/Projects';
@@ -14,7 +15,10 @@ function App() {
     return (
         <div className={`app ${theme}`}>
             <Navbar />
+            
+
             <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/me" element={<Me />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
