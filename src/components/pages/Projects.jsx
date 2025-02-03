@@ -40,7 +40,11 @@ function Projects() {
     <tr>
       <th>Repository</th>
       <th>Beskrivning</th>
+<<<<<<< HEAD
       <th>GH Pages</th>
+=======
+      <th>Pages</th>
+>>>>>>> 4e0fd1805ed9f5d8d62303a932aeec027b9633e0
     </tr>
   </thead>
   <tbody>
