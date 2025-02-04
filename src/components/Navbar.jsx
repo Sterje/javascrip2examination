@@ -17,7 +17,7 @@ function Navbar() {
 
     return (
         <nav className={theme}>
-            <Link to="/" className="title">Sterje</Link>
+            <Link to="/" className="title">STERJE</Link>
             <div 
                 className="menu"
                 onClick={() => setMenuOpen(!menuOpen)} 
@@ -27,14 +27,15 @@ function Navbar() {
                 <span></span>
             </div>
             <ul className={menuOpen ? "open" : ""}>
-                <li><NavLink to="/me" onClick={handleLinkClick}>Me</NavLink></li>
+                <li><NavLink to="/contact" onClick={handleLinkClick}>Contact</NavLink></li>
                 <li><NavLink to="/about" onClick={handleLinkClick}>About</NavLink></li>
                 <li><NavLink to="/projects" onClick={handleLinkClick}>Projects</NavLink></li>
                 <img
                 src={theme === "light" ? darkImage : lightImage} 
                 alt="Theme Toggle"
                 className="theme-toggle"
-                onClick={() => dispatch(toggleTheme())} 
+                onClick={() => dispatch(toggleTheme())}
+                 
             />
             </ul>
         </nav>
