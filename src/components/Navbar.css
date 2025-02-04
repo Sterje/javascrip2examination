@@ -14,7 +14,7 @@ nav {
 
 /* Standard ljusa temat */
 nav.light {
-    background-color: #cdcdcd;
+    background-color: rgb(205, 205, 205);
     color: rgb(0, 0, 0);
 }
 

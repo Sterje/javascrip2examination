@@ -1,0 +1,33 @@
+.about-container.dark {
+    background-image: linear-gradient(rgba(0,0,0,0.99),rgba(0,0,0,0.01)), url('../../assets/background-about.jpg');
+    background-size: cover;
+    background-position: center;
+   
+    height: 91.5vh;  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container.light {
+    background-image: linear-gradient(rgba(205,205,205,1),rgba(205,205,205,0.01)), url('../../assets/background-about.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    height: 91.5vh; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+    .about-container.light {
+        height: 93.5vh;
+    }
+
+    .about-container.dark {
+        height: 93.5vh;
+    }
+}

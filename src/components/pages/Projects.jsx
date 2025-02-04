@@ -34,13 +34,16 @@ function Projects() {
 
   return (
     <>
-    <h2>Mina projekt</h2>
+   
+    <section className='repo-container'>
+    <h2>GitHub repos</h2>
+
     <table className="repo-table">
   <thead>
     <tr>
       <th>Repository</th>
       <th>Beskrivning</th>
-      <th>GitHub Pages</th>
+      <th>Pages</th>
     </tr>
   </thead>
   <tbody>
@@ -58,6 +61,7 @@ function Projects() {
 </tbody>
 
 </table>
+</section>
 
     
   

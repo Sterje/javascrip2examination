@@ -40,11 +40,29 @@
     color:#ffffff;
   }
 
+  .repo-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  h2 {
+    margin: 1rem;
+  }
+
+  
+
   
   
   
   /* Anpassa för små skärmar */
   @media (max-width: 600px) {
+
+    .repo-table {
+        width: 90%;
+    }
+    
     .repo-table th,
     .repo-table td {
       font-size: 14px; /* Gör texten mindre */
