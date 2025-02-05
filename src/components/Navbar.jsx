@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom"; 
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../store/themeSlice"; 
@@ -34,7 +34,10 @@ function Navbar() {
                 src={theme === "light" ? darkImage : lightImage} 
                 alt="Theme Toggle"
                 className="theme-toggle"
-                onClick={() => dispatch(toggleTheme())}
+                onClick={() => {
+                    handleLinkClick(); // Kör din handleLinkClick-funktion
+                    dispatch(toggleTheme()); // Byter tema
+                  }}
                  
             />
             </ul>

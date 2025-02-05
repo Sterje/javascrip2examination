@@ -4,6 +4,15 @@
     width: 100%;
     border-collapse: collapse;
   }
+
+  .repo-table.light {
+    background-color: #ffffff;
+
+  }
+
+  .repo-table.dark {
+    background-color: #000000;
+  }
   
   .repo-table th,
   .repo-table td {
@@ -24,12 +33,12 @@
   /* Mörka temat */
   .dark .even {
     background-color: #000000;
-    color: white;
+    color: #ffffff;
   }
   
   .dark .odd {
     background-color: #444;
-    color: white;
+    color:#ffffff;
   }
   
   .repo-table a {
@@ -37,19 +46,34 @@
   }
 
   .dark a {
-    color:#ffffff;
+    color: #ffffff;
   }
 
   .repo-container {
     display: flex;
     flex-direction: column;
+    
 
     align-items: center;
+  }
+
+  .repo-container.dark {
+    background-color: #444;
+    color: #ffffff;
   }
 
   h2 {
     margin: 1rem;
   }
+
+  button {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+}
 
   
 

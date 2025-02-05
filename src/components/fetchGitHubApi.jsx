@@ -1,0 +1,71 @@
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { useSelector } from "react-redux";
+
+export function FetchGitHubApi() {
+
+    const theme = useSelector((state) => state.theme.theme); 
+
+  const URL = "https://api.github.com/users/sterje/repos";
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(URL);
+        if (!response.ok) {
+          throw new Error("Något gick fel vid hämtning!")
+        }
+        //response.json omvandlar svaret till javascript
+        const result = await response.json();
+        //nu är result JS-objekt
+        setData(result);
+        console.log(result);
+      } catch (error){
+        console.error("Fel: ", error.message);
+        
+      }
+    };
+
+    fetchData();
+    }, []); //Beroende array som bestämmer när funktionen ska köras
+
+  return (
+    <>
+   
+    <section className={`repo-container ${theme}`}>
+    <h2>GitHub repos</h2>
+
+    <table className="repo-table">
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Description</th>
+      <th>Pages</th>
+    </tr>
+  </thead>
+  <tbody>
+  {data.map((repo, index) => (
+    <tr key={repo.id} className={`row ${theme} ${index % 2 === 0 ? "even" : "odd"}`}>
+      <td>
+        <a href={repo.html_url}>{repo.name}</a>
+      </td>
+      <td>{repo.description}</td>
+      <td>
+        <a href={`https://sterje.github.io/${repo.name}`} target='_blank'><button className='gh-button'>Visit</button></a>
+      </td>
+    </tr>
+  ))}
+</tbody>
+
+</table>
+</section>
+
+    
+  
+    </>
+  );
+}
+
+
+export default FetchGitHubApi
