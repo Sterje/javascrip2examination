@@ -1,18 +1,16 @@
-import { useSelector } from 'react-redux';
-import React from 'react';
+import { useSelector } from 'react-redux'; // Importerar useSelector som används till Redux
 import './About.css';
 
-function About({ user }) { // Tar emot user som en prop
-    const theme = useSelector((state) => state.theme.theme);
+function About({ user }) { // Tar emot user som props
+    const theme = useSelector((state) => state.theme.theme); // Hämtar det aktuella temat från store
 
     return (
         <section className={`about-wrapper ${theme}`}>
-            <div className={`about-container ${theme}`}>
-                <h1>About</h1>
-                <p>{user?.name || "Unknown"}</p>
-                <p>{user?.description || "No description available."}</p>
-                <p>Age: {user?.age ?? "N/A"}</p>
-            </div>
+            <section className={`about-container ${theme}`}>
+                {/* Använder user som props för att visa info */}
+                <h2>{user.name}</h2>  
+                <p>{user.description}</p>
+            </section>
         </section>
     );
 }

@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux'; // Importerar useSelector som används för redux
-import React from 'react';
 import './Home.css'
 
 const Home = () => {
