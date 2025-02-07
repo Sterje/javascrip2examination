@@ -1,8 +1,12 @@
-# React + Vite
+Javascrip 2 Examination
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project I'm using React to build att SPA webpage about myself and my abilities.
 
-Currently, two official plugins are available:
+Im using React Redux to change the theme of the website. The user can change between a light or dark theme that applies to the whole site.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Im using useState to change the state of the menu in mobile view.
+
+I'm using props to send data from userInfo to About page.
+
+Right now I'm having some trouble with GH-Pages.
+
