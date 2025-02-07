@@ -1,8 +1,15 @@
-
-/* Grundläggande styling */
 .repo-table {
     width: 100%;
     border-collapse: collapse;
+  }
+
+  .repo-table.light {
+    background-color: #ffffff;
+
+  }
+
+  .repo-table.dark {
+    background-color: #000000;
   }
   
   .repo-table th,
@@ -12,7 +19,6 @@
     text-align: left;
   }
   
-  /* Ljusa temat */
   .light .even {
     background-color: #cdcdcd;
   }
@@ -21,15 +27,14 @@
     background-color: #ffffff;
   }
   
-  /* Mörka temat */
   .dark .even {
     background-color: #000000;
-    color: white;
+    color: #ffffff;
   }
   
   .dark .odd {
     background-color: #444;
-    color: white;
+    color:#ffffff;
   }
   
   .repo-table a {
@@ -37,26 +42,33 @@
   }
 
   .dark a {
-    color:#ffffff;
+    color: #ffffff;
   }
 
   .repo-container {
     display: flex;
     flex-direction: column;
-
     align-items: center;
+  }
+
+  .repo-container.dark {
+    background-color: #444;
+    color: #ffffff;
   }
 
   h2 {
     margin: 1rem;
   }
 
-  
+  button {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+}
 
-  
-  
-  
-  /* Anpassa för små skärmar */
   @media (max-width: 600px) {
 
     .repo-table {
@@ -65,12 +77,12 @@
     
     .repo-table th,
     .repo-table td {
-      font-size: 14px; /* Gör texten mindre */
+      font-size: 14px;
       padding: 8px;
     }
   
     .repo-table th {
-      white-space: nowrap; /* Förhindra att text bryts */
+      white-space: nowrap; 
     }
   }
   

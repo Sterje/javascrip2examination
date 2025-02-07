@@ -12,27 +12,15 @@ nav {
     width: 100%;
 }
 
-/* Standard ljusa temat */
 nav.light {
     background-color: rgb(205, 205, 205);
     color: rgb(0, 0, 0);
 }
 
-/* Mörka temat */
 nav.dark {
     background-color: black;
     color: rgb(0, 0, 0);
 }
-
-button {
-    cursor: pointer;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: gray;
-    color: white;
-}
-
 
 nav.light .title {
     font-size: 1.5rem;
@@ -109,17 +97,6 @@ nav img {
     width: 50px;
 }
 
-/* Navbar.css */
-/* .light {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.dark {
-    background-color: #000000;
-    color: #ffffff;
-} */
-
 body.light {
     background-color: #ffffff;
     color: #000000;
@@ -161,24 +138,3 @@ body.dark {
         margin: .2rem .5rem;
     }
 }
-
-/* Navbar.css */
-/* .light {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.dark {
-    background-color: #000000;
-    color: #ffffff;
-} */
-
-/* body.light {
-    background-color: #f0f0f0;
-    color: #000000;
-}
-
-body.dark {
-    background-color: #181818;
-    color: #ffffff;
-} */

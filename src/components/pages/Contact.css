@@ -9,26 +9,15 @@
 }
 
 .contact-wrapper.dark {
-    background-image: linear-gradient(rgba(0,0,0,0.99),rgba(0,0,0,0.01)), url('../../assets/background-contact.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.99),rgba(0,0,0,0.01)), url('../../assets/background-home.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .contact-wrapper.light {
-    background-image: linear-gradient(rgba(205,205,205,1),rgba(205,205,205,0.01)), url('../../assets/background-contact.jpg');
+    background-image: linear-gradient(rgba(205,205,205,1),rgba(205,205,205,0.01)), url('../../assets/background-home.jpg');
     background-size: cover;
     background-position: center;
-}
-
-.img-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.img-container img {
-    width: 100px;
-
 }
 
 .contact-container {
@@ -62,10 +51,22 @@
 .h2-container.dark {
     color: #faebd7
 }
+
+.img-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-container img {
+    width: 100px;
+}
+
 .icon {
     width: 100px;
     height: 100px;
 }
+
 @media (max-width: 480px) {
     .contact-wrapper.light {
         height: 93.5vh;
@@ -77,11 +78,24 @@
 
     .contact-container {
         width: 100%;
-    
     }
 
     .img-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .contact-container.dark {
+        background-color: transparent;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        border: none;
+    }
+
+    .contact-container.light {
+        background-color: transparent;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        border: none;
     }
 }
